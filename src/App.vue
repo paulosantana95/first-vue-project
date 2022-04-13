@@ -1,16 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1 :style="{ textDecoration: decoration }" >Hello {{ name }}</h1>
+    <input type="text" v-model="name">
+  <br>
+  <br>
+    <a :href="link">Link para o curso!</a>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  data: () => ({
+    name:'Paulo',
+    link: 'https://treinamento.vuejsbrasil.org',
+    decoration: 'underline'
+
+  })
 }
 </script>
 
